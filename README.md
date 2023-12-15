@@ -19,8 +19,10 @@ The program then returns the time taken for each algorithm and memory usage resp
 
 ### Hyperlinks
 (Java Project Hyperlink)
+https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/main/javaProject
 
 (Python Project Hyperlink)
+https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/7aba591bcfea026d19c7ddffadcc0277155ce170/Multi-Threading-Python
 
 ## Review and Evaluation Guidelines
 **Structure and Organisation:** 
@@ -60,7 +62,20 @@ Bubble sort memory: 8.0 kilobytes
 ### Java
 
 #### Array Length 100
+Quick sort time: 7ms
+
+Quick Sort Memory:  6291.456 kilobytes
+
+Bubble sort time: 6 ms
+
+Bubble sort memory: 2562.528 kilobytes
 
 #### Array Length 100000
+Quick sort time: 45ms
 
+Quick Sort Memory: 38240.248 kilobytes
+
+Bubble sort time: 536ms
+
+Bubble sort memory: 47658.984 kilobytes
 
