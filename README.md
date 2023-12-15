@@ -42,20 +42,20 @@ Create a predetermined set of array sizes to test across both programs. These si
 ### Python
 
 #### Array Length 100
-Quick sort time: 0.0009968280792236328 seconds
+Quick sort time: 0.0 seconds
 
 Quick Sort Memory: 0.0 kilobytes
 
-Bubble sort time: 0.0 seconds
+Bubble sort time: 0.0009968280792236328 seconds
 
 Bubble sort memory: 0.0 kilobytes
 
 #### Array Length 100000
-Quick sort time: 7.8014233112335205 seconds
+Quick sort time: 0.016981840133666992 seconds
 
-Quick Sort Memory: 0.0 kilobytes
+Quick Sort Memory: 8.0 kilobytes
 
-Bubble sort time: 0.016981840133666992 seconds
+Bubble sort time: 7.8014233112335205 seconds
 
 Bubble sort memory: 8.0 kilobytes
 
