@@ -18,11 +18,9 @@ To ensure fair testing, an array of given length by the user, randomly generated
 The program then returns the time taken for each algorithm and memory usage respectively for analysis.
 
 ### Hyperlinks
-(Java Project Hyperlink)
-https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/main/javaProject
+[Java Project](https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/main/javaProject)
 
-(Python Project Hyperlink)
-https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/7aba591bcfea026d19c7ddffadcc0277155ce170/Multi-Threading-Python
+[Python Project](https://github.com/CIS1221-2023-2024/C2-Concurrency/tree/7aba591bcfea026d19c7ddffadcc0277155ce170/Multi-Threading-Python)
 
 ## Review and Evaluation Guidelines
 **Structure and Organisation:** 
