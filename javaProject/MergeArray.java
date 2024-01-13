@@ -7,7 +7,7 @@ public class MergeArray {
 		int size1 = array1.size();
 		int size2 = array2.size();
 		
-		List<Integer> mergedArray = new ArrayList<>();
+		List<Integer> mergedArray = new ArrayList<>(size1+size2);
 		
 		int currentPos1 = 0;
 		int currentPos2 = 0;
@@ -22,15 +22,8 @@ public class MergeArray {
 			}
 		}
 		
-		while (currentPos1 < size1) {
-			mergedArray.add(array1.get(currentPos1));
-			currentPos1++;
-        }
-
-        while (currentPos2 < size2) {
-			mergedArray.add(array2.get(currentPos2));
-        	currentPos2++;
-        }
+		mergedArray.addAll(array1.subList(currentPos1, size1));
+		mergedArray.addAll(array2.subList(currentPos2, size2));
 		
 		return mergedArray;
 	}
