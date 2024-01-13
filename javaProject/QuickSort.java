@@ -62,17 +62,4 @@ public class QuickSort extends RecursiveTask<List<Integer>> {
         less.addAll(greater);
         return less;
     }
-
-    /**
-     * The main method that creates a ForkJoinPool and a QuickSort task,
-     * invokes the task, and prints the sorted data.
-     * @param args The command-line arguments.
-     */
-    public static void main(String[] args) {
-        ForkJoinPool commonPool = ForkJoinPool.commonPool();
-        List<Integer> data = List.of(3, 6, 2, 9, 7); // replace with your data
-        QuickSort task = new QuickSort(data);
-        List<Integer> sortedData = commonPool.invoke(task);
-        System.out.println(sortedData);
-    }
 }
