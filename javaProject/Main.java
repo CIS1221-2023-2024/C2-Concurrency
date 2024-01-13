@@ -8,7 +8,6 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		
 		// Ask the user for the size of the array
-		System.out.println("Enter the size of the array: ");
 		int size = readSizeFromConsole();
 		
 		// Generate random array
@@ -27,7 +26,7 @@ public class Main {
 		mP.measureTimesBubble(inputArray);
 			
 		// Measure the time and memory usage of the divideAndSort function
-		mP.measureTimesDivideAndSort(inputArrayCopy);
+		//mP.measureTimesDivideAndSort(inputArrayCopy);
 		
 		// Measure the time and memory usage of the quickSort function
 		mP.measureTimesQuickSort(inputArrayCopy2);
@@ -39,14 +38,21 @@ public class Main {
 	 * @return int
 	 */
 	private static int readSizeFromConsole() {
-		@SuppressWarnings("resource")
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in); 
+		int num;
+		        	do {
+		      		System.out.print("Enter a positive integer for the array size: ");
+		            		while (!scanner.hasNextInt()) {
+		                		System.out.print("Invalid input. Please enter a positive integer: ");
+		                		scanner.next(); // consume the invalid input
+		            		}
+		            		num = scanner.nextInt();
+		            		if (num <= 0) {
+		                		System.out.println("Please enter a positive integer for the array size.");
+		            		}
+		        	} while (num <= 0);
+		        	scanner.close();
+		        	return num;
 
-		int num = scanner.nextInt();
-		
-		scanner.close();
-
-		return num;
 	}
-
 }
