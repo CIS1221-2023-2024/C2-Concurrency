@@ -1,45 +1,29 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-public class BubbleSortFunction {
+public class ArrayGenerator {
 	
 	/**
-	 * Sort an array using the Bubble Sort algorithm
+	 * Generate an array of random integers
 	 * 
-	 * @param List<Integer> to sort
-	 * @return List<Integer> sorted array
+	 * @param size of the array
+	 * @return List<Integer> of random integers between 0 and 10000 
 	 */
-	public List<Integer> bubbleSort(List<Integer> inputArray) {
+	public List<Integer> getRandomArray(int size) {
 		// Input validation
-		if (inputArray == null || inputArray.size() < 0) {
-			throw new IllegalArgumentException("Invalid input array");
+		if (size < 0) {
+			throw new IllegalArgumentException("Array size must be a non-negative number");
 		}
 		
-		boolean swapped;
+		List<Integer> elements = new ArrayList<>(size);
+		Random r = new Random();
 		
-		// Create a copy of the input array to avoid modifying it
-		List<Integer> array = new ArrayList<>(inputArray);
-		
-		for (int i = 0; i < array.size(); i++) {
-			
-			// Boolean variable is initialized to false so that it is then checked if there was another swap
-			swapped = false;
-			
-			for (int j = 0; j < array.size() - 1; j++) {
-				if (array.get(j) > array.get(j+1)) {
-					// Swap array[j] and array[j+1]
-					int aux = array.get(j);
-					array.set(j, array.get(j+1));
-					array.set(j+1, aux);
-					swapped = true;
-				}
-			}
-			
-			if(!swapped) {
-				break;
-			}
+		// Generate random elements
+		for(int i = 0; i < size; i++) {
+			elements.add(r.nextInt(10001));
 		}
 		
-		return array;
+		return elements;
 	}
 }
