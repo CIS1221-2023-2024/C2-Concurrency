@@ -38,4 +38,11 @@ We can see this clearly in the obtained data. With bubbleSort() the execution ti
 
 ![image](https://github.com/CIS1221-2023-2024/C2-Concurrency/assets/124080941/bba60585-3a37-4303-9a1f-953cd5306003)
 
+## Comparison of Python and Java
+
+Despite the concept of Concurrency being the same across both languages, the implementation as well as the limitations and flexibility vary.
+Firstly, with Python, we can note the Global Interpreter lock. This is the restriction of multiple threads from executing Python’s bytecodes at once. The workaround to this for the ThreadPoolExecutor class is to call threads asynchronously and pass them accordingly as an argument using the submit method. A separate task class is now not needed providing a simpler and cleaner code. The disadvantage to this is reduced flexibility and potential optimization achieved.
+In contrast, Java reduces its simplicity in order to obtain a higher degree of control and efficiency. The ForkJoinPool class uses threads which when idle, take tasks from busy queues. This in turn allows for better resource management. This class is however intended to act upon smaller tasks, thus is paired with the Recursive task allowing for the breakdown of the array into smaller arrays.
+
+
 
