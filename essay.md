@@ -1,4 +1,4 @@
-## INTRODUCTION
+## Introduction
 Concurrency allows programs executing multiply task simultaneously, improving the efficiency and capacity of the systems. Nowadays, considering how important is the velocity and the efficiency processing, concurrency emerges as a fundamental pillar for the development of robust and scalable software.
 
 Concurrency’s importance implies decompose complex problems into more manageable tasks that can be executed independently. This allows an optimal utilization of hardware resources and improves the user experience giving fast responses in online environments and real-time applications. Concurrency has become an essential in several areas such as processing of large data sets, design of distributed systems or web servers.
