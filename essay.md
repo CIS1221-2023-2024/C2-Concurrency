@@ -22,7 +22,9 @@ The implementation of Concurrency however does not come without difficulties one
 
 ## Concurrency within Python
 Concurrency within python is typically achieved through a module such as concurrent.futures. This introduces an abstract class called an executor allowing methods which can call asynchronously. It’s two main subclasses are ThreadPoolExecutor and ProcessPoolExecutor. The first utilizing a pool of threads whilst the second utilizes multiple processes.
+
 Our quicksort algorithm makes use of the ThreadPoolExecutor. The list is divided into smaller sub lists based on a less and greater pivot and then sorts these sub lists concurrently. The quicksortfunction is sent to the executor for each sub list, which then schedules the function to be executed, thus, returning a future representation.
+
 Upon examining the performance of both algorithms, a significant observation may be found. Despite the improvement suggested by the challenger to make the bubble sort have a time complexity of O(n) in the best-case scenario, it still is insufficient on larger lists. A significant speedup is presented with the quicksort algorithm which has the complexity of O(n log n) thus being more efficient for larger lists. Given ideal factors, which includes available cores and overhead for creating and managing threads, we are further able to see a significant time reduction with the concurrency introduction.
 
 ## Concurrency within Java
