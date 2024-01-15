@@ -27,7 +27,10 @@ Our quicksort algorithm makes use of the ThreadPoolExecutor. The list is divided
 
 Upon examining the performance of both algorithms, a significant observation may be found. Despite the improvement suggested by the challenger to make the bubble sort have a time complexity of O(n) in the best-case scenario, it still is insufficient on larger lists. A significant speedup is presented with the quicksort algorithm which has the complexity of O(n log n) thus being more efficient for larger lists. Given ideal factors, which includes available cores and overhead for creating and managing threads, we are further able to see a significant time reduction with the concurrency introduction.
 
+![Comparison](https://github.com/CIS1221-2023-2024/C2-Concurrency/assets/149389451/ff75405a-7bd8-47ea-9f43-4350e02f292a)
+
 ## Concurrency within Java
+
 As we have explained previously, we have developed in a concurrently way the Quick Sort algorithm. For that, we have used the “RecursiveTask” class which is given by the “java.util.concurrent” package. It allows us to divide the problem into smaller sub-task which will be executed concurrently using the “ForkJoinPool” and “invokeAll”.
 
 QuickSort() class uses the list of numbers “data” that is going to be divided into smaller parts. For that, we override the compute() method which do the partition of the list in smaller, equal and bigger elements than a pivot, creating new instances of QuickSort() for smaller and bigger partitions. Then, both tasks will be invoked concurrently using invokeAll() and then be joined. Finally, the results will be combined.
